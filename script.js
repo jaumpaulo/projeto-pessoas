@@ -1,152 +1,130 @@
-alert("Caso queira uma lista das classes ou raças, digite HELP")
-
-let mago
-let druida
-let paladino
-let ladino
-let guerreiro
+let classeValor
 //classes
 
-let humano
-let anao
-let elfo
-let orc
-let gigante
+let racaValor
 //raças
 
+let vida
+let nome 
+//personagem
 
+let racaNome
+let classeNome
 //raça/classe
 
-let classeHelp
-let racaHelp
-//variaveis dos HELPs
+alert(`
+    caso queira saber as classes ou as raças digite:
+    "CLASSES" para ver a lista de classes ou "RAÇAS" 
+    para saber a lista de raças. caso queira saber 
+    os dois de uma só vez, digite "TUDO"
+    `)
 
-let classe = prompt("Digite uma classe: ")
-//escolha classe
+let listaPergunta = prompt("O que deseja saber?")
 
-if (classe === "HELP"){
+if (listaPergunta === "CLASSES") {
     alert(`
-        As classes são:
+        LISTA DE CLASSES: 
         MAGO
         DRUIDA
         PALADINO
         LADINO
-        GUERREIRO`)
-
-        classeHelp = prompt("Agora digite uma classe: ")
+        GUERREIRO
+        `)
 }
 
-if (raca === "HElP"){
+if (listaPergunta === "RAÇAS") {
     alert(`
-         As raças são: 
-         HUMANO
-         ANÃO
-         ELFO
-         ORC
-         GIGANTE`)
-
-         racaHelp = prompt("Agora digite uma raça: ") 
-}
-
-if (classe == "mago") {
-    mago = 8
-}
-
-if (classe == "druida") {
-    druida = 12
-}
-
-if (classe == "guerreiro") {
-    guerreiro = 15
-}
-
-if (classe == "paladino") {
-    paladino = 15
-}
-
-if (classe == "laidino") {
-    ladino = 8
-}
-
-if (classeHelp == "mago") {
-    mago = 8
-}
-
-if (classeHelp == "druida") {
-    druida = 12
-}
-
-if (classeHelp == "guerreiro") {
-    guerreiro = 15
-}
-
-if (classeHelp == "paladino") {
-    paladino = 15
-}
-
-if (classeHelp == "ladino") {
-    ladino = 8
-}
-//vida das classes
-
-let raca = prompt("Digite uma raça: ")
-//raca
-
-if (raca == "HElP") {
-    alert(`
-        Essas são as raças: 
+        LISTA DAS RAÇAS: 
         HUMANO
-        ELFO
         ANÃO
+        ELFO
         ORC
-        GIGANTE`)
-
-    racaHelp = prompt ("Esolha uma raça: ")
+        GIGANTE
+        `)
 }
 
-if (raca == "humano") {
-    humano = 2
+if (listaPergunta === "TUDO") {
+    alert(`
+        LISTA CLASSES/RAÇAS:
+
+        CLASSES:           RAÇAS:
+        MAGO               HUMANO
+        DRUIDA             ANÃO
+        PALADINO           ELFO
+        LADINO             ORC
+        GUERREIRO          GIGANTE
+        `)
 }
 
-if (raca == "elfo") {
-    elfo = 3
+alert("Agora vamos começar a fazer a ficha!")
+
+nome = prompt("Digite o nome do seu personagem: ").toLowerCase()
+
+classeNome = prompt("Digite a classe do seu personagem: ").toLowerCase()
+if (classeNome == "mago") {
+    classeValor = 8
 }
 
-if (raca == "anão") {
-    anao = 1
+if (classeNome == "druida") {
+    classeValor = 12
 }
 
-if (raca == "orc") {
-    orc = 5
+if (classeNome == "paladino") {
+    classeValor = 15
 }
 
-if (raca == "gigante") {
-    gigante = 6
+if (classeNome == "ladino") {
+    classeValor = 9
 }
 
-if (racaHelp == "humano") {
-    humano = 2
+if (classeNome == "guerreiro") {
+    classeValor = 15
+}
+//informações da classe
+
+racaNome = prompt("Digite a raça do seu personagem: ").toLowerCase()
+if (racaNome == "humano") {
+    racaValor = 2
+} 
+
+if (racaNome == "anão") {
+    racaValor = 1
 }
 
-if (racaHelp == "elfo") {
-    elfo = 3
+if (racaNome == "elfo") {
+    racaValor = 3
 }
 
-if (racaHelp == "anão") {
-    anao = 1
+if (racaNome == "orc") {
+    racaValor = 4
 }
 
-if (racaHelp == "orc") {
-    orc = 5
+if (racaNome == "gigante") {
+    racaValor = 6
 }
+//informações da raça
 
-if (racaHelp == "gigante") {
-    gigante = 6
-}
-//vida da raça
+vida = classeValor + racaValor
+//vida do personagem
 
-alert (`=====FICHA DO PERSONAGEM=====
-    NOME:
-    RAÇA:
-    CLASSE:
-    =============================`)
+alert(`
+    =====FICHA DO SEU PERSONAGEM=====
+    NOME: ${nome}
+    RAÇA: ${racaNome}
+    CLASSE: ${classeNome}
+    VIDA: ${vida}
+    =================================
+    `)
+
+const ficha = `
+    =====FICHA DO SEU PERSONAGEM=====
+    NOME: ${nome}
+    RAÇA: ${racaNome}
+    CLASSE: ${classeNome}
+    VIDA: ${vida}
+    =================================
+    `
+
+    function mostrarFicha (ficha) {
+        alert(ficha)
+    }
