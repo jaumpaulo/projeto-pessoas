@@ -1,25 +1,41 @@
 let classeValor
-//classes
+// classes
 
 let racaValor
-//raças
+// raças
 
 let vida
 let nome 
-//personagem
+// personagem
 
 let racaNome
 let classeNome
-//raça/classe
+// raça/classe
 
+let listaPergunta
+//listas
+
+let ficha
+let atributos
+//resultado da ficha
+
+let forçaValor
+let destrezaValor
+let constituicaoValor
+let sabedoriaValor
+let inteligenciaValor
+let carisamValor
+//valores dos atributos
+
+function criarFicha () {
 alert(`
-    caso queira saber as classes ou as raças digite:
+    Caso queira saber as classes ou as raças digite:
     "CLASSES" para ver a lista de classes ou "RAÇAS" 
-    para saber a lista de raças. caso queira saber 
+    para saber a lista de raças. Caso queira saber 
     os dois de uma só vez, digite "TUDO"
-    `)
+`)
 
-let listaPergunta = prompt("O que deseja saber?")
+listaPergunta = prompt("O que deseja saber?")
 
 if (listaPergunta === "CLASSES") {
     alert(`
@@ -29,7 +45,7 @@ if (listaPergunta === "CLASSES") {
         PALADINO
         LADINO
         GUERREIRO
-        `)
+    `)
 }
 
 if (listaPergunta === "RAÇAS") {
@@ -40,7 +56,7 @@ if (listaPergunta === "RAÇAS") {
         ELFO
         ORC
         GIGANTE
-        `)
+    `)
 }
 
 if (listaPergunta === "TUDO") {
@@ -53,14 +69,17 @@ if (listaPergunta === "TUDO") {
         PALADINO           ELFO
         LADINO             ORC
         GUERREIRO          GIGANTE
-        `)
+    `)
 }
 
 alert("Agora vamos começar a fazer a ficha!")
 
+// Nome do personagem
 nome = prompt("Digite o nome do seu personagem: ").toLowerCase()
 
+// Classe do personagem
 classeNome = prompt("Digite a classe do seu personagem: ").toLowerCase()
+
 if (classeNome == "mago") {
     classeValor = 8
 }
@@ -80,9 +99,10 @@ if (classeNome == "ladino") {
 if (classeNome == "guerreiro") {
     classeValor = 15
 }
-//informações da classe
 
+// Raça do personagem
 racaNome = prompt("Digite a raça do seu personagem: ").toLowerCase()
+
 if (racaNome == "humano") {
     racaValor = 2
 } 
@@ -102,10 +122,9 @@ if (racaNome == "orc") {
 if (racaNome == "gigante") {
     racaValor = 6
 }
-//informações da raça
 
+// Calculando vida
 vida = classeValor + racaValor
-//vida do personagem
 
 alert(`
     =====FICHA DO SEU PERSONAGEM=====
@@ -114,17 +133,58 @@ alert(`
     CLASSE: ${classeNome}
     VIDA: ${vida}
     =================================
-    `)
+`)
 
-const ficha = `
+// Guardando ficha em uma variável
+ficha = `
     =====FICHA DO SEU PERSONAGEM=====
     NOME: ${nome}
     RAÇA: ${racaNome}
     CLASSE: ${classeNome}
     VIDA: ${vida}
     =================================
-    `
+`
+}
 
-    function mostrarFicha (ficha) {
-        alert(ficha)
-    }
+// Funções
+function mostrarFicha(ficha) {
+    alert(ficha)
+}
+
+function adicionarAtributos() {
+    alert(`
+        Os respectivos valores que você pode colocar são:
+        8, 10, 12, 13, 14 e 15
+    `)
+
+    alert(`
+        Você pode colocar esses valores nos seguintes
+        atributos: FORÇA, DESTREZA, CONSTITUIÇÃO
+        SABEDORIA, INTELIGÊNCIA E CARISMA
+    `)
+
+    forçaValor = parseInt(prompt("Valor de força: "))
+    destrezaValor = parseInt(prompt("Valor de destreza: "))
+    constituicaoValor = parseInt(prompt("Valor de constituição: "))
+    sabedoriaValor = parseInt(prompt("Valor de sabedoria: "))
+    inteligenciaValor = parseInt(prompt("Valor de inteligencia: "))
+    carisamValor = parseInt(prompt("Valor de carisma: "))
+
+    atributos = `
+        =====ATRIBUTOS=====
+        FORÇA: ${forçaValor} 
+        DESTREZA: ${destrezaValor}
+        CONSTIUIÇÃO: ${constituicaoValor}
+        SABEDORIA: ${sabedoriaValor}
+        INTELIGENCIA: ${inteligenciaValor}
+        CARISMA: ${carisamValor}
+        ===================
+    `
+    alert(atributos)
+
+    return atributos
+}
+
+function mostrarAtributos (atributos) {
+    alert(atributos)
+}
