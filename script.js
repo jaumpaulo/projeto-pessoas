@@ -11,7 +11,8 @@ let sabedoria
 let carisma
 //atributos do personagem
 
-let ficha //ficha do personagem
+
+ 
 
 document.addEventListener("DOMContentLoaded", function() {
     const guardar = document.getElementById("gerar")
@@ -25,22 +26,30 @@ document.addEventListener("DOMContentLoaded", function() {
          inteligencia = parseInt(document.getElementById("inteligencia").value)
          sabedoria = parseInt(document.getElementById("sabedoria").value)
          carisma = parseInt(document.getElementById("carisma").value)
+    })
+})
 
-         ficha = (`
+function mostrarFicha () {
+    let forcaModificador = Math.floor((forca - 10)/2)
+    let destrezaModificador = Math.floor((destreza - 10)/2)
+    let constituicaoModificador = Math.floor((constituicao - 10)/2)
+    let inteligenciaModificador = Math.floor((inteligencia - 10)/2)
+    let sabedoriaModificador = Math.floor((sabedoria - 10)/2)
+    let carismaModificador = Math.floor((carisma - 10)/2)
+
+       ficha = alert (`
+
             NOME: ${nome}
             RAÇA: ${raca}
             CLASSSE: ${classe}
             ==================
-            FORÇA: ${forca}
-            DESTREZA: ${destreza}
-            CONSTITUIÇÃO: ${constituicao}
-            INTEGENCIA: ${inteligencia}
-            SABEDORIA: ${sabedoria}
-            CARISMA: ${carisma}
+            FORÇA: ${forca}   modificador: ${forcaModificador}
+            DESTREZA: ${destreza}   modificador: ${destrezaModificador} 
+            CONSTITUIÇÃO: ${constituicao}   modificador: ${constituicaoModificador} 
+            INTEGENCIA: ${inteligencia}   modificador: ${inteligenciaModificador}
+            SABEDORIA: ${sabedoria}   modificador: ${sabedoriaModificador}
+            CARISMA: ${carisma}   modificador: ${carismaModificador}
             `)
-    })
-    
-})
-function mostrarFicha () {
-        alert(ficha)
-    }
+}
+
+//ajeitar o calculador de modificador
