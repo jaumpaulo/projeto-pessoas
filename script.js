@@ -11,6 +11,25 @@ let sabedoria
 let carisma
 //atributos do personagem
 
+let atletismo
+let acrobacia
+let furtividade
+let prestidigitacao
+let arcanismo
+let historia
+let investigacao
+let natureza
+let religiao
+let intuicao
+let medicina
+let percepcao
+let sobrevivencia
+let lidarcomanimais
+let atuacao
+let enganacao
+let intimidacao
+//proeficiencias do personagem
+
 
  
 
@@ -26,8 +45,29 @@ document.addEventListener("DOMContentLoaded", function() {
          inteligencia = parseInt(document.getElementById("inteligencia").value)
          sabedoria = parseInt(document.getElementById("sabedoria").value)
          carisma = parseInt(document.getElementById("carisma").value)
+
+         atletismo = document.getElementById("atletismo").checked
+         acrobacia = document.getElementById("acrobacia").checked
+         furtividade = document.getElementById("furtividade").checked
+         prestidigitacao = document.getElementById("prestidigitacao").checked
+         arcanismo = document.getElementById("arcanismo").checked
+         historia = document.getElementById("historia").checked
+         investigacao = document.getElementById("investigacao").checked
+         natureza = document.getElementById("natureza").checked
+         religiao = document.getElementById("religiao").checked
+         intuicao = document.getElementById("intuicao").checked
+         medicina = document.getElementById("medicina").checked
+         percepcao = document.getElementById("percepcao").checked
+         sobrevivencia = document.getElementById("sobrevivencia").checked
+         lidarcomanimais = document.getElementById("lidarcomanimais").checked
+         atuacao = document.getElementById("atuacao").checked
+         enganacao = document.getElementById("enganacao").checked
+         intimidacao = document.getElementById("intimidacao").checked
+
     })
 })
+
+
 
 function mostrarFicha () {
     let forcaModificador = Math.floor((forca - 10)/2)
@@ -49,7 +89,8 @@ function mostrarFicha () {
             INTEGENCIA: ${inteligencia}   modificador: ${inteligenciaModificador}
             SABEDORIA: ${sabedoria}   modificador: ${sabedoriaModificador}
             CARISMA: ${carisma}   modificador: ${carismaModificador}
+            ===================
+
             `)
 }
-
 //ajeitar o calculador de modificador

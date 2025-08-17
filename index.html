@@ -11,23 +11,21 @@
     <input type="text" id="nome"><br>   
 
     <label for="raca">Escolha sua raça</label><br>
-    <select name="raca" id="raca"> multiple>
+    <select name="raca" id="raca">
         <option value="humano">HUMANO</option>
         <option value="elfo">ELFO</option>
         <option value="anao">ANÃO</option>
         <option value="orc">ORC</option>
         <option value="gigante">GIGANTE</option>
-    </multiple>
     </select><br>
 
-    <label for="classe">Escola sua classe</label><br>
-    <select name="classe" id="classe"> multiple>
+    <label for="classe">Escolha sua classe</label><br>
+    <select name="classe" id="classe">
         <option value="mago">MAGO</option>
-        <option value="drudida">DRUIDA</option>
+        <option value="druida">DRUIDA</option>
         <option value="paladino">PALADINO</option>
         <option value="ladino">LADINO</option>
         <option value="guerreiro">GUERREIRO</option>
-    </multiple>
     </select><br>
 
     <h2>Atributos</h2>
@@ -43,6 +41,52 @@
     <input type="number" name="sabedoria" id="sabedoria"><br>
     <label for="carisma">CARISMA</label><br>
     <input type="number" name="carisma" id="carisma"><br><br>
+
+    <h2>PROEFICIÊNCIAS</h2>
+
+    <h3>FORÇA</h3>
+    <label for="atletismo">Atletismo</label><br>
+    <input type="checkbox" name="atletismo" id="atletismo"><br>
+
+    <h3>DESTREZA</h3>
+    <label for="acrobacia">Acrobacia</label><br>
+    <input type="checkbox" name="acrobacia" id="acrobacia"><br>
+    <label for="furtuvidade">Furtividade</label><br>
+    <input type="checkbox" name="furtuvidade" id="furtuvidade"><br>
+    <label for="prestidigitacao">Prestidigitação</label><br>
+    <input type="checkbox" name="prestidigitacao" id="prestidigitacao"><br>
+
+    <h3>INTELIGÊNCIA</h3>
+    <label for="arcanismo">Arcanismo</label><br>
+    <input type="checkbox" name="arcanismo" id="arcanismo"><br>
+    <label for="historia">História</label><br>
+    <input type="checkbox" name="historia" id="historia"><br>
+    <label for="investigacao">Investigação</label><br>
+    <input type="checkbox" name="investigacao" id="investigacao"><br>
+    <label for="natureza">Natureza</label><br>
+    <input type="checkbox" name="natureza" id="natureza"><br>
+    <label for="religiao">Religião</label><br>
+    <input type="checkbox" name="religiao" id="religiao"><br>
+
+    <h3>SABEDORIA</h3>
+    <label for="intuicao">Intuição</label><br>
+    <input type="checkbox" name="intuicao" id="intuicao"><br>
+    <label for="medicina">Medicina</label><br>
+    <input type="checkbox" name="medicina" id="medicina"><br>
+    <label for="percepcao">Percepção</label><br>
+    <input type="checkbox" name="percepcao" id="percepcao"><br>
+    <label for="sobrevivencia">Sobrevivência</label><br>
+    <input type="checkbox" name="sobrevivencia" id="sobrevivencia"><br>
+    <label for="lidarcomanimais">Lidar com animais</label><br>
+    <input type="checkbox" name="lidarcomanimais" id="lidarcomanimais"><br>
+
+    <h3>CARISMA</h3>
+    <label for="atuacao">Atuação</label><br>
+    <input type="checkbox" name="atuacao" id="atuacao"><br>
+    <label for="enganacao">Enganação</label><br>
+    <input type="checkbox" name="enganacao" id="enganacao"><br>
+    <label for="intimidacao">Intimidação</label><br>
+    <input type="checkbox" name="intimidacao" id="intimidacao"><br>
 
     <button id="gerar">Gerar ficha</button><br><br>
     <button onclick="mostrarFicha ()">Mostrar ficha</button>
