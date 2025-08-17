@@ -4,16 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <script src="./script.js"></script>
+     <script src="./script.js"></script>
+    <label for="nome">Nome do personagem</label><br>
+    <input type="text" id="nome"><br>   
 
-    <button onclick="criarFicha ()">Criar ficha</button>
-    <button onclick="mostrarFicha (ficha)">Mostrar ficha</button>
-    <button onclick="adicionarAtributos ()">Adicionar atributos</button>
-    <button onclick="mostrarAtributos (atributos)">Mostrar atributos</button>
+    <label for="raca">Escolha sua raça</label><br>
+    <select name="raca" id="raca"> multiple>
+        <option value="humano">HUMANO</option>
+        <option value="elfo">ELFO</option>
+        <option value="anao">ANÃO</option>
+        <option value="orc">ORC</option>
+        <option value="gigante">GIGANTE</option>
+    </multiple>
+    </select><br>
 
+    <label for="classe">Escola sua classe</label><br>
+    <select name="classe" id="classe"> multiple>
+        <option value="mago">MAGO</option>
+        <option value="drudida">DRUIDA</option>
+        <option value="paladino">PALADINO</option>
+        <option value="ladino">LADINO</option>
+        <option value="guerreiro">GUERREIRO</option>
+    </multiple>
+    </select><br>
+
+    <h2>Atributos</h2>
+    <label for="forca">FORÇA</label><br>
+    <input type="number" name="forca" id="forca"><br>
+    <label for="destreza">DESTREZA</label><br>
+    <input type="number" name="destreza" id="destreza"><br>
+    <label for="constituicao">CONSTITUIÇÃO</label><br>
+    <input type="number" name="constituicao" id="constituicao"><br>
+    <label for="inteligencia">INTELIGÊNCIA</label><br>
+    <input type="number" name="inteligencia" id="inteligencia"><br>
+    <label for="sabedoria">SABEDORIA</label><br>
+    <input type="number" name="sabedoria" id="sabedoria"><br>
+    <label for="carisma">CARISMA</label><br>
+    <input type="number" name="carisma" id="carisma"><br><br>
+
+    <button id="gerar">Gerar ficha</button><br><br>
+    <button onclick="mostrarFicha ()">Mostrar ficha</button>
 </body>
 </html>
