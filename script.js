@@ -88,9 +88,10 @@ function mostrarFicha () {
             CONSTITUIÇÃO: ${constituicao}   modificador: ${constituicaoModificador} 
             INTEGENCIA: ${inteligencia}   modificador: ${inteligenciaModificador}
             SABEDORIA: ${sabedoria}   modificador: ${sabedoriaModificador}
-            CARISMA: ${carisma}   modificador: ${carismaModificador}
+            CARISMA: ${carisma}   modificador: ${carismaModificador} 
             ===================
-
+            assssssssssss
+            ${intuicao}
             `)
 }
 //ajeitar o calculador de modificador
