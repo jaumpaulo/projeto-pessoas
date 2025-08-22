@@ -94,4 +94,4 @@ function mostrarFicha () {
             ${intuicao}
             `)
 }
-//ajeitar o calculador de modificador
+
